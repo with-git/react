@@ -59,11 +59,11 @@ function ReactLink(value, requestChange) {
 function createLinkTypeChecker(linkType) {
   var shapes = {
     value: linkType === undefined
-      ? React.PropTypes.any.isRequired
+      ? PropTypes.any.isRequired
       : linkType.isRequired,
-    requestChange: React.PropTypes.func.isRequired,
+    requestChange: PropTypes.func.isRequired,
   };
-  return React.PropTypes.shape(shapes);
+  return PropTypes.shape(shapes);
 }
 
 ReactLink.PropTypes = {
